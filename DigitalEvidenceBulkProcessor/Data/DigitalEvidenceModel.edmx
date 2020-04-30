@@ -1,0 +1,424 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="BnakEyeIzuModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'BankEyeIzuTest.dbo.IZURoles' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="IZURoles">
+          <Key>
+            <PropertyRef Name="RoleID" />
+            <PropertyRef Name="RoleName" />
+            <PropertyRef Name="CanRegister" />
+            <PropertyRef Name="CaptureImage" />
+            <PropertyRef Name="BrowseTransaction" />
+            <PropertyRef Name="Upload" />
+            <PropertyRef Name="SetupUser" />
+            <PropertyRef Name="SetupBranch" />
+            <PropertyRef Name="SetUpSystemParameters" />
+            <PropertyRef Name="SetUpTranscopeParameters" />
+            <PropertyRef Name="AddUser" />
+            <PropertyRef Name="EditUser" />
+            <PropertyRef Name="BrowseUser" />
+            <PropertyRef Name="DeleteUser" />
+            <PropertyRef Name="AddCountry" />
+            <PropertyRef Name="EditCountry" />
+            <PropertyRef Name="BrowseCountry" />
+            <PropertyRef Name="DeleteCountry" />
+            <PropertyRef Name="AddState" />
+            <PropertyRef Name="EditState" />
+            <PropertyRef Name="BrowseState" />
+            <PropertyRef Name="DeleteState" />
+            <PropertyRef Name="AddTransactionCategory" />
+            <PropertyRef Name="EditTransactionCategory" />
+            <PropertyRef Name="BrowseTransactionCategory" />
+            <PropertyRef Name="DeleteTransactionCategory" />
+            <PropertyRef Name="ViewReports" />
+            <PropertyRef Name="ExportTransaction" />
+            <PropertyRef Name="PrintTransaction" />
+            <PropertyRef Name="SuperUser" />
+            <PropertyRef Name="Suspended" />
+            <PropertyRef Name="CreatedBy" />
+            <PropertyRef Name="LastUpdatedBy" />
+            <PropertyRef Name="LastUpdatedOn" />
+            <PropertyRef Name="CanConfigurePollData" />
+            <PropertyRef Name="CanConfigureDataMover" />
+          </Key>
+          <Property Name="RoleID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="RoleName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="CanRegister" Type="bit" Nullable="false" />
+          <Property Name="CaptureImage" Type="bit" Nullable="false" />
+          <Property Name="BrowseTransaction" Type="bit" Nullable="false" />
+          <Property Name="Upload" Type="bit" Nullable="false" />
+          <Property Name="SetupUser" Type="bit" Nullable="false" />
+          <Property Name="SetupBranch" Type="bit" Nullable="false" />
+          <Property Name="SetUpSystemParameters" Type="bit" Nullable="false" />
+          <Property Name="SetUpTranscopeParameters" Type="bit" Nullable="false" />
+          <Property Name="AddUser" Type="bit" Nullable="false" />
+          <Property Name="EditUser" Type="bit" Nullable="false" />
+          <Property Name="BrowseUser" Type="bit" Nullable="false" />
+          <Property Name="DeleteUser" Type="bit" Nullable="false" />
+          <Property Name="AddCountry" Type="bit" Nullable="false" />
+          <Property Name="EditCountry" Type="bit" Nullable="false" />
+          <Property Name="BrowseCountry" Type="bit" Nullable="false" />
+          <Property Name="DeleteCountry" Type="bit" Nullable="false" />
+          <Property Name="AddState" Type="bit" Nullable="false" />
+          <Property Name="EditState" Type="bit" Nullable="false" />
+          <Property Name="BrowseState" Type="bit" Nullable="false" />
+          <Property Name="DeleteState" Type="bit" Nullable="false" />
+          <Property Name="AddTransactionCategory" Type="bit" Nullable="false" />
+          <Property Name="EditTransactionCategory" Type="bit" Nullable="false" />
+          <Property Name="BrowseTransactionCategory" Type="bit" Nullable="false" />
+          <Property Name="DeleteTransactionCategory" Type="bit" Nullable="false" />
+          <Property Name="ViewReports" Type="bit" Nullable="false" />
+          <Property Name="ExportTransaction" Type="bit" Nullable="false" />
+          <Property Name="PrintTransaction" Type="bit" Nullable="false" />
+          <Property Name="SuperUser" Type="bit" Nullable="false" />
+          <Property Name="Suspended" Type="bit" Nullable="false" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="LastUpdatedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="LastUpdatedOn" Type="datetime" Nullable="false" />
+          <Property Name="CanConfigurePollData" Type="bit" Nullable="false" />
+          <Property Name="CanConfigureDataMover" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="IZUUsers">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="BranchCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="UserNames" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ResetPassword" Type="bit" Nullable="false" />
+          <Property Name="CanRegister" Type="bit" Nullable="false" />
+          <Property Name="CaptureImage" Type="bit" Nullable="false" />
+          <Property Name="BrowseTransaction" Type="bit" Nullable="false" />
+          <Property Name="Upload" Type="bit" Nullable="false" />
+          <Property Name="SetupUser" Type="bit" Nullable="false" />
+          <Property Name="SetupBranch" Type="bit" Nullable="false" />
+          <Property Name="SetUpSystemParameters" Type="bit" Nullable="false" />
+          <Property Name="SetUpTranscopeParameters" Type="bit" Nullable="false" />
+          <Property Name="AddUser" Type="bit" Nullable="false" />
+          <Property Name="EditUser" Type="bit" Nullable="false" />
+          <Property Name="BrowseUser" Type="bit" Nullable="false" />
+          <Property Name="DeleteUser" Type="bit" Nullable="false" />
+          <Property Name="AddCountry" Type="bit" Nullable="false" />
+          <Property Name="EditCountry" Type="bit" Nullable="false" />
+          <Property Name="BrowseCountry" Type="bit" Nullable="false" />
+          <Property Name="DeleteCountry" Type="bit" Nullable="false" />
+          <Property Name="AddState" Type="bit" Nullable="false" />
+          <Property Name="EditState" Type="bit" Nullable="false" />
+          <Property Name="BrowseState" Type="bit" Nullable="false" />
+          <Property Name="DeleteState" Type="bit" Nullable="false" />
+          <Property Name="AddTransactionCategory" Type="bit" Nullable="false" />
+          <Property Name="EditTransactionCategory" Type="bit" Nullable="false" />
+          <Property Name="BrowseTransactionCategory" Type="bit" Nullable="false" />
+          <Property Name="DeleteTransactionCategory" Type="bit" Nullable="false" />
+          <Property Name="ViewReports" Type="bit" Nullable="false" />
+          <Property Name="ExportTransaction" Type="bit" Nullable="false" />
+          <Property Name="PrintTransaction" Type="bit" Nullable="false" />
+          <Property Name="SuperUser" Type="bit" Nullable="false" />
+          <Property Name="Suspended" Type="bit" Nullable="false" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="LastUpdatedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="LastUpdatedOn" Type="datetime" Nullable="false" />
+          <Property Name="CanConfigurePollData" Type="bit" Nullable="false" />
+          <Property Name="CanConfigureDataMover" Type="bit" Nullable="false" />
+          <Property Name="LastLogOn" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="BnakEyeIzuModelStoreContainer">
+          <EntitySet Name="IZUUsers" EntityType="Self.IZUUsers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="IZURoles" EntityType="Self.IZURoles" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [IZURoles].[RoleID] AS [RoleID], 
+    [IZURoles].[RoleName] AS [RoleName], 
+    [IZURoles].[CanRegister] AS [CanRegister], 
+    [IZURoles].[CaptureImage] AS [CaptureImage], 
+    [IZURoles].[BrowseTransaction] AS [BrowseTransaction], 
+    [IZURoles].[Upload] AS [Upload], 
+    [IZURoles].[SetupUser] AS [SetupUser], 
+    [IZURoles].[SetupBranch] AS [SetupBranch], 
+    [IZURoles].[SetUpSystemParameters] AS [SetUpSystemParameters], 
+    [IZURoles].[SetUpTranscopeParameters] AS [SetUpTranscopeParameters], 
+    [IZURoles].[AddUser] AS [AddUser], 
+    [IZURoles].[EditUser] AS [EditUser], 
+    [IZURoles].[BrowseUser] AS [BrowseUser], 
+    [IZURoles].[DeleteUser] AS [DeleteUser], 
+    [IZURoles].[AddCountry] AS [AddCountry], 
+    [IZURoles].[EditCountry] AS [EditCountry], 
+    [IZURoles].[BrowseCountry] AS [BrowseCountry], 
+    [IZURoles].[DeleteCountry] AS [DeleteCountry], 
+    [IZURoles].[AddState] AS [AddState], 
+    [IZURoles].[EditState] AS [EditState], 
+    [IZURoles].[BrowseState] AS [BrowseState], 
+    [IZURoles].[DeleteState] AS [DeleteState], 
+    [IZURoles].[AddTransactionCategory] AS [AddTransactionCategory], 
+    [IZURoles].[EditTransactionCategory] AS [EditTransactionCategory], 
+    [IZURoles].[BrowseTransactionCategory] AS [BrowseTransactionCategory], 
+    [IZURoles].[DeleteTransactionCategory] AS [DeleteTransactionCategory], 
+    [IZURoles].[ViewReports] AS [ViewReports], 
+    [IZURoles].[ExportTransaction] AS [ExportTransaction], 
+    [IZURoles].[PrintTransaction] AS [PrintTransaction], 
+    [IZURoles].[SuperUser] AS [SuperUser], 
+    [IZURoles].[Suspended] AS [Suspended], 
+    [IZURoles].[CreatedBy] AS [CreatedBy], 
+    [IZURoles].[LastUpdatedBy] AS [LastUpdatedBy], 
+    [IZURoles].[LastUpdatedOn] AS [LastUpdatedOn], 
+    [IZURoles].[CanConfigurePollData] AS [CanConfigurePollData], 
+    [IZURoles].[CanConfigureDataMover] AS [CanConfigureDataMover]
+    FROM [dbo].[IZURoles] AS [IZURoles]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="BnakEyeIzuModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="IZUUser">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="BranchCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="UserNames" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ResetPassword" Type="Boolean" Nullable="false" />
+          <Property Name="CanRegister" Type="Boolean" Nullable="false" />
+          <Property Name="CaptureImage" Type="Boolean" Nullable="false" />
+          <Property Name="BrowseTransaction" Type="Boolean" Nullable="false" />
+          <Property Name="Upload" Type="Boolean" Nullable="false" />
+          <Property Name="SetupUser" Type="Boolean" Nullable="false" />
+          <Property Name="SetupBranch" Type="Boolean" Nullable="false" />
+          <Property Name="SetUpSystemParameters" Type="Boolean" Nullable="false" />
+          <Property Name="SetUpTranscopeParameters" Type="Boolean" Nullable="false" />
+          <Property Name="AddUser" Type="Boolean" Nullable="false" />
+          <Property Name="EditUser" Type="Boolean" Nullable="false" />
+          <Property Name="BrowseUser" Type="Boolean" Nullable="false" />
+          <Property Name="DeleteUser" Type="Boolean" Nullable="false" />
+          <Property Name="AddCountry" Type="Boolean" Nullable="false" />
+          <Property Name="EditCountry" Type="Boolean" Nullable="false" />
+          <Property Name="BrowseCountry" Type="Boolean" Nullable="false" />
+          <Property Name="DeleteCountry" Type="Boolean" Nullable="false" />
+          <Property Name="AddState" Type="Boolean" Nullable="false" />
+          <Property Name="EditState" Type="Boolean" Nullable="false" />
+          <Property Name="BrowseState" Type="Boolean" Nullable="false" />
+          <Property Name="DeleteState" Type="Boolean" Nullable="false" />
+          <Property Name="AddTransactionCategory" Type="Boolean" Nullable="false" />
+          <Property Name="EditTransactionCategory" Type="Boolean" Nullable="false" />
+          <Property Name="BrowseTransactionCategory" Type="Boolean" Nullable="false" />
+          <Property Name="DeleteTransactionCategory" Type="Boolean" Nullable="false" />
+          <Property Name="ViewReports" Type="Boolean" Nullable="false" />
+          <Property Name="ExportTransaction" Type="Boolean" Nullable="false" />
+          <Property Name="PrintTransaction" Type="Boolean" Nullable="false" />
+          <Property Name="SuperUser" Type="Boolean" Nullable="false" />
+          <Property Name="Suspended" Type="Boolean" Nullable="false" />
+          <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LastUpdatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LastUpdatedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CanConfigurePollData" Type="Boolean" Nullable="false" />
+          <Property Name="CanConfigureDataMover" Type="Boolean" Nullable="false" />
+          <Property Name="LastLogOn" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="IZURole">
+          <Key>
+            <PropertyRef Name="RoleID" />
+            <PropertyRef Name="RoleName" />
+            <PropertyRef Name="CanRegister" />
+            <PropertyRef Name="CaptureImage" />
+            <PropertyRef Name="BrowseTransaction" />
+            <PropertyRef Name="Upload" />
+            <PropertyRef Name="SetupUser" />
+            <PropertyRef Name="SetupBranch" />
+            <PropertyRef Name="SetUpSystemParameters" />
+            <PropertyRef Name="SetUpTranscopeParameters" />
+            <PropertyRef Name="AddUser" />
+            <PropertyRef Name="EditUser" />
+            <PropertyRef Name="BrowseUser" />
+            <PropertyRef Name="DeleteUser" />
+            <PropertyRef Name="AddCountry" />
+            <PropertyRef Name="EditCountry" />
+            <PropertyRef Name="BrowseCountry" />
+            <PropertyRef Name="DeleteCountry" />
+            <PropertyRef Name="AddState" />
+            <PropertyRef Name="EditState" />
+            <PropertyRef Name="BrowseState" />
+            <PropertyRef Name="DeleteState" />
+            <PropertyRef Name="AddTransactionCategory" />
+            <PropertyRef Name="EditTransactionCategory" />
+            <PropertyRef Name="BrowseTransactionCategory" />
+            <PropertyRef Name="DeleteTransactionCategory" />
+            <PropertyRef Name="ViewReports" />
+            <PropertyRef Name="ExportTransaction" />
+            <PropertyRef Name="PrintTransaction" />
+            <PropertyRef Name="SuperUser" />
+            <PropertyRef Name="Suspended" />
+            <PropertyRef Name="CreatedBy" />
+            <PropertyRef Name="LastUpdatedBy" />
+            <PropertyRef Name="LastUpdatedOn" />
+            <PropertyRef Name="CanConfigurePollData" />
+            <PropertyRef Name="CanConfigureDataMover" />
+          </Key>
+          <Property Name="RoleID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="RoleName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CanRegister" Type="Boolean" Nullable="false" />
+          <Property Name="CaptureImage" Type="Boolean" Nullable="false" />
+          <Property Name="BrowseTransaction" Type="Boolean" Nullable="false" />
+          <Property Name="Upload" Type="Boolean" Nullable="false" />
+          <Property Name="SetupUser" Type="Boolean" Nullable="false" />
+          <Property Name="SetupBranch" Type="Boolean" Nullable="false" />
+          <Property Name="SetUpSystemParameters" Type="Boolean" Nullable="false" />
+          <Property Name="SetUpTranscopeParameters" Type="Boolean" Nullable="false" />
+          <Property Name="AddUser" Type="Boolean" Nullable="false" />
+          <Property Name="EditUser" Type="Boolean" Nullable="false" />
+          <Property Name="BrowseUser" Type="Boolean" Nullable="false" />
+          <Property Name="DeleteUser" Type="Boolean" Nullable="false" />
+          <Property Name="AddCountry" Type="Boolean" Nullable="false" />
+          <Property Name="EditCountry" Type="Boolean" Nullable="false" />
+          <Property Name="BrowseCountry" Type="Boolean" Nullable="false" />
+          <Property Name="DeleteCountry" Type="Boolean" Nullable="false" />
+          <Property Name="AddState" Type="Boolean" Nullable="false" />
+          <Property Name="EditState" Type="Boolean" Nullable="false" />
+          <Property Name="BrowseState" Type="Boolean" Nullable="false" />
+          <Property Name="DeleteState" Type="Boolean" Nullable="false" />
+          <Property Name="AddTransactionCategory" Type="Boolean" Nullable="false" />
+          <Property Name="EditTransactionCategory" Type="Boolean" Nullable="false" />
+          <Property Name="BrowseTransactionCategory" Type="Boolean" Nullable="false" />
+          <Property Name="DeleteTransactionCategory" Type="Boolean" Nullable="false" />
+          <Property Name="ViewReports" Type="Boolean" Nullable="false" />
+          <Property Name="ExportTransaction" Type="Boolean" Nullable="false" />
+          <Property Name="PrintTransaction" Type="Boolean" Nullable="false" />
+          <Property Name="SuperUser" Type="Boolean" Nullable="false" />
+          <Property Name="Suspended" Type="Boolean" Nullable="false" />
+          <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LastUpdatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LastUpdatedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CanConfigurePollData" Type="Boolean" Nullable="false" />
+          <Property Name="CanConfigureDataMover" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="BankEyeIzuEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="IZUUsers" EntityType="Self.IZUUser" />
+          <EntitySet Name="IZURoles" EntityType="Self.IZURole" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="BnakEyeIzuModelStoreContainer" CdmEntityContainer="BankEyeIzuEntities">
+          <EntitySetMapping Name="IZUUsers">
+            <EntityTypeMapping TypeName="BnakEyeIzuModel.IZUUser">
+              <MappingFragment StoreEntitySet="IZUUsers">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="BranchCode" ColumnName="BranchCode" />
+                <ScalarProperty Name="UserNames" ColumnName="UserNames" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="ResetPassword" ColumnName="ResetPassword" />
+                <ScalarProperty Name="CanRegister" ColumnName="CanRegister" />
+                <ScalarProperty Name="CaptureImage" ColumnName="CaptureImage" />
+                <ScalarProperty Name="BrowseTransaction" ColumnName="BrowseTransaction" />
+                <ScalarProperty Name="Upload" ColumnName="Upload" />
+                <ScalarProperty Name="SetupUser" ColumnName="SetupUser" />
+                <ScalarProperty Name="SetupBranch" ColumnName="SetupBranch" />
+                <ScalarProperty Name="SetUpSystemParameters" ColumnName="SetUpSystemParameters" />
+                <ScalarProperty Name="SetUpTranscopeParameters" ColumnName="SetUpTranscopeParameters" />
+                <ScalarProperty Name="AddUser" ColumnName="AddUser" />
+                <ScalarProperty Name="EditUser" ColumnName="EditUser" />
+                <ScalarProperty Name="BrowseUser" ColumnName="BrowseUser" />
+                <ScalarProperty Name="DeleteUser" ColumnName="DeleteUser" />
+                <ScalarProperty Name="AddCountry" ColumnName="AddCountry" />
+                <ScalarProperty Name="EditCountry" ColumnName="EditCountry" />
+                <ScalarProperty Name="BrowseCountry" ColumnName="BrowseCountry" />
+                <ScalarProperty Name="DeleteCountry" ColumnName="DeleteCountry" />
+                <ScalarProperty Name="AddState" ColumnName="AddState" />
+                <ScalarProperty Name="EditState" ColumnName="EditState" />
+                <ScalarProperty Name="BrowseState" ColumnName="BrowseState" />
+                <ScalarProperty Name="DeleteState" ColumnName="DeleteState" />
+                <ScalarProperty Name="AddTransactionCategory" ColumnName="AddTransactionCategory" />
+                <ScalarProperty Name="EditTransactionCategory" ColumnName="EditTransactionCategory" />
+                <ScalarProperty Name="BrowseTransactionCategory" ColumnName="BrowseTransactionCategory" />
+                <ScalarProperty Name="DeleteTransactionCategory" ColumnName="DeleteTransactionCategory" />
+                <ScalarProperty Name="ViewReports" ColumnName="ViewReports" />
+                <ScalarProperty Name="ExportTransaction" ColumnName="ExportTransaction" />
+                <ScalarProperty Name="PrintTransaction" ColumnName="PrintTransaction" />
+                <ScalarProperty Name="SuperUser" ColumnName="SuperUser" />
+                <ScalarProperty Name="Suspended" ColumnName="Suspended" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="LastUpdatedBy" ColumnName="LastUpdatedBy" />
+                <ScalarProperty Name="LastUpdatedOn" ColumnName="LastUpdatedOn" />
+                <ScalarProperty Name="CanConfigurePollData" ColumnName="CanConfigurePollData" />
+                <ScalarProperty Name="CanConfigureDataMover" ColumnName="CanConfigureDataMover" />
+                <ScalarProperty Name="LastLogOn" ColumnName="LastLogOn" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="IZURoles">
+            <EntityTypeMapping TypeName="BnakEyeIzuModel.IZURole">
+              <MappingFragment StoreEntitySet="IZURoles">
+                <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+                <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+                <ScalarProperty Name="CanRegister" ColumnName="CanRegister" />
+                <ScalarProperty Name="CaptureImage" ColumnName="CaptureImage" />
+                <ScalarProperty Name="BrowseTransaction" ColumnName="BrowseTransaction" />
+                <ScalarProperty Name="Upload" ColumnName="Upload" />
+                <ScalarProperty Name="SetupUser" ColumnName="SetupUser" />
+                <ScalarProperty Name="SetupBranch" ColumnName="SetupBranch" />
+                <ScalarProperty Name="SetUpSystemParameters" ColumnName="SetUpSystemParameters" />
+                <ScalarProperty Name="SetUpTranscopeParameters" ColumnName="SetUpTranscopeParameters" />
+                <ScalarProperty Name="AddUser" ColumnName="AddUser" />
+                <ScalarProperty Name="EditUser" ColumnName="EditUser" />
+                <ScalarProperty Name="BrowseUser" ColumnName="BrowseUser" />
+                <ScalarProperty Name="DeleteUser" ColumnName="DeleteUser" />
+                <ScalarProperty Name="AddCountry" ColumnName="AddCountry" />
+                <ScalarProperty Name="EditCountry" ColumnName="EditCountry" />
+                <ScalarProperty Name="BrowseCountry" ColumnName="BrowseCountry" />
+                <ScalarProperty Name="DeleteCountry" ColumnName="DeleteCountry" />
+                <ScalarProperty Name="AddState" ColumnName="AddState" />
+                <ScalarProperty Name="EditState" ColumnName="EditState" />
+                <ScalarProperty Name="BrowseState" ColumnName="BrowseState" />
+                <ScalarProperty Name="DeleteState" ColumnName="DeleteState" />
+                <ScalarProperty Name="AddTransactionCategory" ColumnName="AddTransactionCategory" />
+                <ScalarProperty Name="EditTransactionCategory" ColumnName="EditTransactionCategory" />
+                <ScalarProperty Name="BrowseTransactionCategory" ColumnName="BrowseTransactionCategory" />
+                <ScalarProperty Name="DeleteTransactionCategory" ColumnName="DeleteTransactionCategory" />
+                <ScalarProperty Name="ViewReports" ColumnName="ViewReports" />
+                <ScalarProperty Name="ExportTransaction" ColumnName="ExportTransaction" />
+                <ScalarProperty Name="PrintTransaction" ColumnName="PrintTransaction" />
+                <ScalarProperty Name="SuperUser" ColumnName="SuperUser" />
+                <ScalarProperty Name="Suspended" ColumnName="Suspended" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="LastUpdatedBy" ColumnName="LastUpdatedBy" />
+                <ScalarProperty Name="LastUpdatedOn" ColumnName="LastUpdatedOn" />
+                <ScalarProperty Name="CanConfigurePollData" ColumnName="CanConfigurePollData" />
+                <ScalarProperty Name="CanConfigureDataMover" ColumnName="CanConfigureDataMover" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
