@@ -122,7 +122,7 @@
             this.btnProcess.Name = "btnProcess";
             this.btnProcess.Size = new System.Drawing.Size(194, 31);
             this.btnProcess.TabIndex = 7;
-            this.btnProcess.Text = "IMPORT";
+            this.btnProcess.Text = "Import Data";
             this.btnProcess.UseVisualStyleBackColor = true;
             this.btnProcess.Click += new System.EventHandler(this.btnProcess_Click);
             // 
@@ -253,6 +253,7 @@
             this.existingDataGridView.ReadOnly = true;
             this.existingDataGridView.Size = new System.Drawing.Size(1075, 490);
             this.existingDataGridView.TabIndex = 11;
+            this.existingDataGridView.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.existingDataGridView_RowPostPaint);
             // 
             // dataGridViewTextBoxColumn4
             // 

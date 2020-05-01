@@ -46,6 +46,11 @@ namespace DigitalEvidenceBulkProcessor
         {
             var fName = string.Empty;
 
+            if (cmbModule.SelectedIndex <= -1)
+            {
+                MessageBox.Show("Select a Module");
+                return;
+            }
             using (OpenFileDialog openFileDialog = new OpenFileDialog()
             {
                 Filter = "Excel WorkBook |*.xlsx| Excel 97 -2003 WorkBook (*.xls)|*.xls",
@@ -82,7 +87,7 @@ namespace DigitalEvidenceBulkProcessor
         {
             if (existingTellers.Count() > 0)
             {
-                MessageBox.Show($"{existingTellers.Count()} of these users already exists in the database. Remove these users from  Excel file and try again.", "Users Already Exist", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show($"{existingTellers.Count()} of these users already exist in the database. Remove these users from  Excel file and try again.", "Users Already Exist", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -237,20 +242,24 @@ namespace DigitalEvidenceBulkProcessor
 
         private void usersDataGridView_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
         {
+            AddDataGridSerialNumber(e, usersDataGridView);
+        }
+
+        private void AddDataGridSerialNumber(DataGridViewRowPostPaintEventArgs e, DataGridView dataGridView)
+        {
             string strRowNumber = (e.RowIndex + 1).ToString();
-            while (strRowNumber.Length < usersDataGridView.RowCount.ToString().Length)
+            while (strRowNumber.Length < dataGridView.RowCount.ToString().Length)
             {
                 strRowNumber = "0" + strRowNumber;
             }
             SizeF size = e.Graphics.MeasureString(strRowNumber, this.Font);
 
-            if (usersDataGridView.RowHeadersWidth < (int)(size.Width + 20))
+            if (dataGridView.RowHeadersWidth < (int)(size.Width + 20))
             {
-                usersDataGridView.RowHeadersWidth = (int)(size.Width + 20);
+                dataGridView.RowHeadersWidth = (int)(size.Width + 20);
             }
             Brush b = SystemBrushes.ControlText;
             e.Graphics.DrawString(strRowNumber, this.Font, b, e.RowBounds.Location.X + 15, e.RowBounds.Location.Y + ((e.RowBounds.Height - size.Height) / 2));
-            //usersDataGridView.OnRowPostPaint(e);
         }
 
         private IEnumerable<IZUUser> GetExistingUsers(List<IZUUser> users)
@@ -263,6 +272,22 @@ namespace DigitalEvidenceBulkProcessor
             }
 
             return result;
+        }
+
+        private void existingDataGridView_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
+        {
+            AddDataGridSerialNumber(e, existingDataGridView);
+        }
+
+        private string[] GetExistingBranchCodes()
+        {
+            string[] existingBranchCodes = null;
+            //write your codes below here
+
+
+
+            //write your codes above here
+            return existingBranchCodes;
         }
     }
 }

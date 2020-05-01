@@ -27,5 +27,6 @@ namespace DigitalEvidenceBulkProcessor.Data
     
         public virtual DbSet<IZUUser> IZUUsers { get; set; }
         public virtual DbSet<IZURole> IZURoles { get; set; }
+        public virtual DbSet<BankBranch> BankBranches { get; set; }
     }
 }
